@@ -1,4 +1,4 @@
-package Method5;
+package day3.Method5;
 //호출 스택(call stack)
 //메서드 수행에 필요한 메모리가 제공되는 공간메서드가 호출되면 호출 스택에 메모리가 할당, 종료되면 해제됩니다.
 public class CallStack5_2 {

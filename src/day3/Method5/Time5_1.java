@@ -1,4 +1,4 @@
-package Method5;
+package day3.Method5;
 // 문장들의 묶음
 // 코드의 중복을 하나의 묶음으로 만들어 코드의 가독성 및 효율을 높여줌
 public class Time5_1 {

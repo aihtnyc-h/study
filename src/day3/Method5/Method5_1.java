@@ -1,4 +1,4 @@
-package Method5;
+package day3.Method5;
 //메서드 호출
 public class Method5_1 {
     int add(int x, int y) {

@@ -57,5 +57,6 @@ class Student {
                 + "," + math
                 ;
     }
+    public Student(){}
 
 }

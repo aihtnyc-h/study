@@ -10,6 +10,7 @@ public class report3_4 {
             int s = 1; // 값의 부호를 바꿔주는데 사용할 변수
             int num = 0;
             for (int a = 1; true; a++, s = s*(-1))  {
+                // true 비워두면 무한 반복된다!  for (int a = 1; ; a++, s = s*(-1))
                 num = s * a;
                 sum += num;
 

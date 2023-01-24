@@ -1,4 +1,4 @@
-package Method5;
+package day3.Method5;
 //return
 public class Method5_2 {
     void gugudan(int dan) {
