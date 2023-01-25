@@ -15,7 +15,7 @@ public class report7_2 {
 
     /*isNumber 메서드를 작성하세요.*/
     public static boolean isNumber(String str){
-        if(str == null || str.equals("")) //??????
+        if(str == null || str.equals(""))
         return false;
 
         for(int i=0; i<str.length(); i++){

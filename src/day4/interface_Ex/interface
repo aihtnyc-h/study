@@ -1,0 +1,92 @@
+인터페이스
+추상 메서드의 집합 입니다.
+구현된 것이 전혀 없는 설계도 입니다.
+모든 멤버가 public 입니다.
+상수 이외의 인스턴스 변수, 클래스 변수는 가질 수 없습니다.
+
+interface 인터페이스이름 {
+          public static final 타입 상수이름 = 값; // 상수
+          public abstract 메서드이름(매개변수목록); // 추상 메서드
+}
+interface PlayingCard {
+    public static final int SPADE = 4;
+    final int DIAMOND = 3; // public static final int DIAMOND = 3;
+    static int HEART = 2;  // public static final int HEART = 2;
+    int CLOVER = 1;        // public static final int CLOVER = 1;
+
+    public abstract String getCardNumber();
+    String getCardKing(); // public abstract String getCardKing();
+}
+
+
+인터페이스의 상속
+인터페이스의 조상은 인터페이스만 가능합니다.
+인터페이스는 클래스 처럼 Object 가 최고 조상이 아닙니다.
+추상 메서드는 어차피 상속 받으면서 구현부를 작성하기 때문에 충돌해도 상관 없습니다.
+따라서 다중 상속이 가능합니다.
+interface Fightable extends Movable, Attackable {} // 인터페이스 다중 상속
+
+interface Movable {
+    void move(int x, int y);
+}
+
+interface Attackable {
+    void attack(Unit u);
+}
+
+인터페이스의 구현
+인터페이스에 정의된 추상 메서드를 완성하는 것입니다.
+class 클래스이름implements인터페이스이름 {...}
+클래스에서 implements 라는 키워드를 사용하여 인터페이스를 구현합니다.
+class Unit {}
+
+interface Fightable extends Movable, Attackable {}
+
+interface Movable {
+    void move(int x, int y);
+}
+
+interface Attackable {
+    void attack(Unit u);
+}
+
+class InterfaceTest implements Fightable {
+
+    @Override
+    public void move(int x, int y) {
+           (구현)
+    }
+
+    @Override
+    public void attack(Unit u) {
+           (구현)
+    }
+}
+
+추상 클래스 때와 마찬가지로 구현을 다 못한 클래스는 아직 미완성된 클래스로 취급하기 때문에 abstract 제어자를 클래스에 추가해야 합니다.
+class Unit {}
+
+interface Fightable extends Movable, Attackable {}
+
+interface Movable {
+    void move(int x, int y);
+}
+
+interface Attackable {
+    void attack(Unit u);
+}
+
+abstract class InterfaceTest implements Fightable {
+
+    @Override
+    public void move(int x, int y) {
+
+    }
+
+    // attack(Unit u); // 미 구현
+
+}
+
+인터페이스의 다형성
+인터페이스 return 타입
+인터페이스를 메서드의 반환 타입으로 지정할 수 있습니다.
