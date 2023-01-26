@@ -1,6 +1,6 @@
 package day3.homework.report7;
 
-public class report7_3 {
+
 //6-19. Tv클래스를 주어진 로직대로 완성하세요. 완성한 후에 실행해서 주어진 실행결과와 일치하는지 확인하세요.
     class MyTv {
         boolean isPowerOn;
@@ -46,7 +46,7 @@ public class report7_3 {
                 channel--;
             }
         }
-    }
+
 
 
         public static void main(String args[]) {
