@@ -1,6 +1,6 @@
 package SA;
 
-public class board extends bus_station{
+public class board extends drive {
     @Override
     void board(int pass, String dest, int dis) {
 

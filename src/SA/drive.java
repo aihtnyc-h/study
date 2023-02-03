@@ -1,15 +1,14 @@
 package SA;
 
-public abstract class bus_station {
-    int currentGas;
-
-    String status;
-
+public abstract class drive {
+    //    void board(int pass, String dest, int dis) {
+//
+//    }
 
     //    void board(int pass, String dest, int dis) {
 //
 //    }
-    // 주유량
+    // 주유량 어려우어ㅜ어ㅜ어ㅜ어
     abstract void board(int pass, String dest, int dis);
 
     abstract void refuel();
@@ -22,4 +21,6 @@ public abstract class bus_station {
 
     // 승객 탑승
     abstract int board(int pass);
+
+
 }
