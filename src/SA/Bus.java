@@ -2,14 +2,24 @@ package SA;
 
 public class Bus extends bus_station {
     // 버스
+    private boolean gascondition() {
+        return true;
+    }
+
+    private boolean available() {
+        //승객 탑승은 ‘최대 승객수’ 이하까지 가능
+        return maxP >= currentP;
+    }
+
     int maxP = 30; // 최대 승객수
     int currentP = 0;   // 현재 승객수
     int cost = 1500;    //4월부터 인상!!
 
+
     // 버스 번호 지정 [고유값]
     void busNum(int i) {
         if (i == 1) {
-            System.out.println("버스번호 : 1");
+            System.out.println("버스번호 : 1 ");
         } else {
             System.out.println("버스번호 : 2");
         }
@@ -61,9 +71,7 @@ public class Bus extends bus_station {
         }     // 빨간줄은 abstract class에 적어주면 사라진다~
     }
 
-    private boolean gascondition() {
-        return true;
-    }
+
 
     // 승객 탑승
     @Override
@@ -83,49 +91,6 @@ public class Bus extends bus_station {
         }
         return currentP;
     }
-
-
-    private boolean available() {
-        //승객 탑승은 ‘최대 승객수’ 이하까지 가능
-        return maxP >= currentP;
-    }
-
-    public static void main(String[] args) {
-        // 버스 테스트
-        // 1번
-        // 1~2. 버스 2대 생성 & 출력
-        Bus bus1 = new Bus();
-        Bus bus2 = new Bus();
-
-        // 2번 (버스 1대로 진행)
-        // 1 ~ 2. 승객 +2 & 출력
-        bus1.busNum(1);
-        bus2.busNum(2);
-        bus1.board(2);
-        // 3 ~ 4. 주유량 50
-        bus1.refuel(40);        // 주유량에서 10 미만일 때 작동이 안되는 거 같다...
-        System.out.println("주유량 = "+bus1.currentGas);
-        // 5. 상태 변경 => 차고지행
-        bus1.bus_station(false);
-        // 6. 주유량 +10
-        bus1.refuel(10);
-        // 7. 버스 상태와 주유량 출력
-        bus1.currentBus();
-        // 8. 상태 변경 => 운행중
-        bus1.bus_station(true);
-        // 9 ~ 10. 승객 +45 => 최대 승객 수 초과
-        bus1.board(45);
-        // 11 ~ 12. 승객 +5 & 출력
-        bus1.board(5);
-        // 13. 주유량 -55
-        bus1.refuel(-55);
-        // 14. 버스 상태와 주유량 출력
-        bus1.currentBus();
-
-
-
-    }
-
 }
 
 
